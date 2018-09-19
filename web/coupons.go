@@ -87,5 +87,4 @@ func (web *Web) CouponUpdate(w http.ResponseWriter, r *http.Request, id uint) {
 	}
 
 	w.WriteHeader(200)
-
 }
