@@ -4,9 +4,9 @@ import "os"
 
 // Config the main configuration.
 type Config struct {
-	Data  `json:"-"`
-	MySQL SQL `json:"sql"`
-	Web   Web `json:"web"`
+	Data `json:"-"`
+	SQL  SQL `json:"sql"`
+	Web  Web `json:"web"`
 }
 
 // SQL contains all the apropriate information for the SQL connection.
@@ -22,7 +22,7 @@ type Web struct {
 // DefaultConfig the default configuration to save.
 var DefaultConfig = Config{
 	Data: Data{},
-	MySQL: SQL{
+	SQL: SQL{
 		URI: "username:password@tcp(127.0.0.1:3306)/perkbox?charset=utf8&parseTime=True&loc=Local",
 	},
 	Web: Web{
